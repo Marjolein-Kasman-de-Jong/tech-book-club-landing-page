@@ -1,0 +1,98 @@
+@use "../base/breakpoints" as *;
+
+body {
+    font-family: var(--regular-paragraph);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--neutral-900);
+}
+
+.text-preset-1 {
+    font-family: var(--headings);
+    font-size: 2.375rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.125rem;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 3.875rem;
+    }
+}
+
+.text-preset-2 {
+    font-family: var(--headings);
+    font-size: 2.125rem;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.125rem;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 3.125rem;
+    }
+}
+
+.text-preset-3 {
+    font-family: var(--headings);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 2.125rem;
+        line-height: 130%;
+    }
+}
+
+.text-preset-4-regular {
+    font-family: var(--headings);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0625rem;
+}
+
+.text-preset-4-semibold {
+    font-family: var(--headings);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+}
+
+.text-preset-5-regular {
+    font-family: var(--regular-paragraph);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.03125rem;
+}
+
+.text-preset-5-semibold {
+    font-family: var(--regular-paragraph);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.03125rem;
+}
+
+.text-preset-6 {
+    font-family: var(--headings);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.0625rem;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 1.125rem;
+    }
+}
+
+.text-preset-7 {
+    font-family: var(--headings);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0625rem;
+}
