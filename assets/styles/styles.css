@@ -27,3 +27,19 @@ video {
     display: block;
     max-width: 100%;
 }
+
+
+/* Colors */
+
+:root {
+    --neutral-900: #062630;
+    --neutral-700: #385159;
+    --neutral-200: #E6E1DF;
+    --neutral-100: #FAF5F3;
+    --neutral-0: #FFF;
+    --accent-500: #FEA36F;
+    --accent-100: #FFE2D1;
+    --accent-50: #FFF5EF;
+    --gradient-1: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
+    --gradient-2: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+}
