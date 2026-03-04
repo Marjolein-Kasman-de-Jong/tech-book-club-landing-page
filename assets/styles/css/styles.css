@@ -1,4 +1,3 @@
-/* CSS reset */
 *,
 *::before,
 *::after {
@@ -27,7 +26,6 @@ video {
   max-width: 100%;
 }
 
-/* Variables */
 :root {
   /* colors */
   --neutral-900: #062630;
@@ -66,10 +64,6 @@ video {
   --radius-20: 20px;
   --radius-24: 24px;
   --radius-full: 999px;
-}
-
-body {
-  background-color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */
