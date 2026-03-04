@@ -1,0 +1,7 @@
+@use "../base/breakpoints" as *;
+
+@media (min-width: $breakpoint-s) {
+    header {
+        background-color: blue;
+    }
+}

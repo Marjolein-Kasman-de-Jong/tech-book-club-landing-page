@@ -66,4 +66,10 @@ video {
   --radius-full: 999px;
 }
 
+@media (min-width: 768px) {
+  header {
+    background-color: blue;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
