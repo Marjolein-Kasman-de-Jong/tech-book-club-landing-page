@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Martian Mono";
+  src: url("../../fonts/martian-mono/MartianMono-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -64,12 +85,6 @@ video {
   --radius-20: 20px;
   --radius-24: 24px;
   --radius-full: 999px;
-}
-
-@media (min-width: 768px) {
-  header {
-    background-color: blue;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
