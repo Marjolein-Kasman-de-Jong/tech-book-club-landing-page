@@ -1,2 +1,12 @@
 @use "base/reset";
 @use "base/variables";
+
+@use "layout/header";
+@use "layout/footer";
+
+@use "sections/hero";
+@use "sections/image-text";
+@use "sections/text-image";
+@use "sections/steps";
+@use "sections/three-cards";
+@use "sections/testimonial";
