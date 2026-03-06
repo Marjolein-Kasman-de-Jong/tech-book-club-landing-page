@@ -213,7 +213,7 @@ main section .section-content-wrapper {
 
 .hero {
   position: relative;
-  background: url("../../../../assets/images/pattern-light-bg.svg"), var(--accent-50);
+  background: url("../../images/pattern-light-bg.svg"), var(--accent-50);
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
