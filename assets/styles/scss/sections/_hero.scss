@@ -1,0 +1,154 @@
+@use "../base/breakpoints" as *;
+
+.hero {
+    position: relative;
+    background:
+        url("../../../../assets/images/pattern-light-bg.svg"),
+        var(--accent-50);
+    overflow: hidden;
+
+    &::before {
+        @media screen and (min-width: $breakpoint-s) {
+            content: "";
+            position: absolute;
+            bottom: -299.956px;
+            right: -342px;
+            z-index: 0;
+            width: 684px;
+            height: 684px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .4;
+            background-color: var(--decoration);
+
+            @media screen and (min-width: $breakpoint-m) {
+                bottom: -226px;
+                right: -472px;
+            }
+        }
+    }
+
+    .section-content-wrapper {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        padding-top: 108px;
+        padding-bottom: 80px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            padding-top: 132px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                width: 82.39%;
+                max-width: 1444px;
+                padding-top: 148px;
+                flex-direction: row;
+                align-items: center;
+                gap: var(--spacing-800);
+            }
+        }
+
+        .hero-content {
+            @media screen and (min-width: $breakpoint-m) {
+                width: 100%;
+                min-width: 0;
+                flex: 570 1 0;
+            }
+
+            .hero-content-title {
+                background: var(--gradient-1);
+                background-clip: text;
+                color: transparent;
+
+                @media screen and (min-width: $breakpoint-s) {
+                    width: 80%;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        width: unset;
+                    }
+                }
+            }
+
+            .hero-content-description {
+                margin-top: var(--spacing-300);
+                color: var(--neutral-700);
+
+                @media screen and (min-width: $breakpoint-s) {
+                    width: 95%;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        width: unset;
+                    }
+                }
+            }
+
+            .hero-content-button {
+                margin-top: var(--spacing-400);
+            }
+
+            .hero-content-social-proof {
+                margin-top: var(--spacing-250);
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-150);
+
+                @media screen and (min-width: $breakpoint-s) {
+                    width: 55.12%;
+
+                    @media screen and (min-width: $breakpoint-m) {
+                        width: 68.07%;
+                    }
+                }
+
+                .hero-content-social-proof-avatars {
+                    width: 100%;
+                    min-width: 0;
+                    flex: 110 1 0;
+                }
+
+                .hero-content-social-proof-rating {
+                    width: 100%;
+                    min-width: 0;
+                    flex: 221 1 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-050);
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        flex: 266 1 0;
+                    }
+
+                    .hero-content-social-proof-rating-stars {
+                        display: flex;
+                        justify-content: left;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero-image {
+            margin-top: var(--spacing-800);
+            border-radius: 5.081px;
+            overflow: hidden;
+
+            @media screen and (min-width: $breakpoint-s) {
+                border-radius: 10.43px;
+                max-width: 704px;
+
+                @media screen and (min-width: $breakpoint-m) {
+                    margin-top: unset;
+                    width: 100%;
+                    min-width: 0;
+                    max-width: unset;
+                    flex: 540 1 0;
+                }
+            }
+        }
+    }
+}

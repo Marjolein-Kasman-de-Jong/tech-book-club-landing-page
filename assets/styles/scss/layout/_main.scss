@@ -1,0 +1,21 @@
+@use "../base/breakpoints" as *;
+
+main {
+    section {
+        display: flex;
+        justify-content: center;
+
+        .section-content-wrapper {
+            width: 91.47%;
+
+            @media screen and (min-width: $breakpoint-s) {
+                width: 91.67%;
+
+                @media screen and (min-width: $breakpoint-m) {
+                    width: 82.15%;
+                    max-width: 1440px;
+                }
+            }
+        }
+    }
+}
