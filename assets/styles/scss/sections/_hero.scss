@@ -134,11 +134,11 @@
 
         .hero-image {
             margin-top: var(--spacing-800);
-            border-radius: 5.081px;
+            border-radius: var(--radius-5);
             overflow: hidden;
 
             @media screen and (min-width: $breakpoint-s) {
-                border-radius: 10.43px;
+                border-radius: var(--radius-10);
                 max-width: 704px;
 
                 @media screen and (min-width: $breakpoint-m) {

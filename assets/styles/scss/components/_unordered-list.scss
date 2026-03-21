@@ -1,0 +1,31 @@
+@use "../base/breakpoints" as *;
+
+.unordered-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    list-style: none;
+    padding-left: 0;
+
+    @media screen and (min-width: $breakpoint-s) {
+        gap: 24px;
+    }
+
+    li {
+        position: relative;
+        padding-left: 42px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url("/assets/images/icon-check.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}

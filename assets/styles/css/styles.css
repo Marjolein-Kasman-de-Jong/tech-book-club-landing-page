@@ -78,6 +78,7 @@ video {
   /* radius */
   --radius-0: 0;
   --radius-4: 4px;
+  --radius-5: 5px;
   --radius-6: 6px;
   --radius-8: 8px;
   --radius-10: 10px;
@@ -85,6 +86,7 @@ video {
   --radius-16: 16px;
   --radius-20: 20px;
   --radius-24: 24px;
+  --radius-25: 25px;
   --radius-full: 999px;
   /* fonts */
   --headings: "Martian Mono", sans-serif;
@@ -343,12 +345,12 @@ main section .section-content-wrapper {
 }
 .hero .section-content-wrapper .hero-image {
   margin-top: var(--spacing-800);
-  border-radius: 5.081px;
+  border-radius: var(--radius-5);
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero .section-content-wrapper .hero-image {
-    border-radius: 10.43px;
+    border-radius: var(--radius-10);
     max-width: 704px;
   }
 }
@@ -359,6 +361,36 @@ main section .section-content-wrapper {
     min-width: 0;
     max-width: unset;
     flex: 540 1 0;
+  }
+}
+
+.image-text .section-content-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--spacing-500);
+  padding: var(--spacing-800) 0;
+}
+@media screen and (min-width: 768px) {
+  .image-text .section-content-wrapper {
+    padding: var(--spacing-1000) 0;
+  }
+}
+.image-text .section-content-wrapper .image-wrapper img {
+  border-radius: var(--radius-12);
+}
+@media screen and (min-width: 768px) {
+  .image-text .section-content-wrapper .image-wrapper img {
+    border-radius: var(--radius-25);
+  }
+}
+.image-text .section-content-wrapper .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+@media screen and (min-width: 768px) {
+  .image-text .section-content-wrapper .text-wrapper {
+    gap: 34px;
   }
 }
 
@@ -407,6 +439,35 @@ main section .section-content-wrapper {
 .button-light > * {
   position: relative;
   z-index: 1;
+}
+
+.unordered-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  list-style: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .unordered-list {
+    gap: 24px;
+  }
+}
+.unordered-list li {
+  position: relative;
+  padding-left: 42px;
+}
+.unordered-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=styles.css.map */

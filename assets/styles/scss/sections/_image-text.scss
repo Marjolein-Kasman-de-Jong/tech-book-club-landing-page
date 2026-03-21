@@ -1,0 +1,34 @@
+@use "../base/breakpoints" as *;
+
+.image-text {
+    .section-content-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: var(--spacing-500);
+        padding: var(--spacing-800) 0;
+
+        @media screen and (min-width: $breakpoint-s) {
+            padding: var(--spacing-1000) 0;
+        }
+
+        .image-wrapper {
+            img {
+                border-radius: var(--radius-12);
+
+                @media screen and (min-width: $breakpoint-s) {
+                    border-radius: var(--radius-25);
+                }
+            }
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-300);
+
+            @media screen and (min-width: $breakpoint-s) {
+                gap: 34px;
+            }
+        }
+    }
+}
