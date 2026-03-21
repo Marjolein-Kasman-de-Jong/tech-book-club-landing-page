@@ -13,7 +13,7 @@
  * - Best used when loaded at the end of the <body>.
 */
 
-const minWidth = 768; // minimum viewport width (in pixels) required to apply the balancing (0 = apply always)
+const minWidth = 0; // minimum viewport width (in pixels) required to apply the balancing (0 = apply always)
 
 function balanceTitle(selector, minWidth = 0) {
   const elements = document.querySelectorAll(selector);
