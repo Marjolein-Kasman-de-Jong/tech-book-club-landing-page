@@ -4,11 +4,11 @@
     .section-content-wrapper {
         display: flex;
         flex-direction: column-reverse;
-        gap: var(--spacing-500);
-        padding: var(--spacing-800) 0;
+        gap: 40px;
+        padding: 64px 0;
 
         @media screen and (min-width: $breakpoint-s) {
-            padding: var(--spacing-1000) 0;
+            padding: 80px 0;
 
             @media screen and (min-width: $breakpoint-m) {
                 flex-direction: row;
@@ -43,7 +43,7 @@
         .text-wrapper {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-300);
+            gap: 24px;
 
             @media screen and (min-width: $breakpoint-s) {
                 gap: 34px;
