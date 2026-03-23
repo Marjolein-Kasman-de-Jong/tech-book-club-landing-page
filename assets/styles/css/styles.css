@@ -501,7 +501,7 @@ main section .section-content-wrapper {
   top: 50%;
   width: 24px;
   height: 24px;
-  background-image: url("/assets/images/icon-check.svg");
+  background-image: url("../../images/icon-check.svg");
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0;
