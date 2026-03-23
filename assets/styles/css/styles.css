@@ -345,12 +345,12 @@ main section .section-content-wrapper {
 }
 .hero .section-content-wrapper .hero-image {
   margin-top: 64px;
-  border-radius: var(--radius-5);
+  border-radius: 5px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero .section-content-wrapper .hero-image {
-    border-radius: var(--radius-10);
+    border-radius: 10px;
     max-width: 704px;
   }
 }
@@ -391,12 +391,12 @@ main section .section-content-wrapper {
   }
 }
 .image-text .section-content-wrapper .image-wrapper img {
-  border-radius: var(--radius-12);
+  border-radius: 12px;
 }
 @media screen and (min-width: 768px) {
   .image-text .section-content-wrapper .image-wrapper img {
     max-width: 704px;
-    border-radius: var(--radius-25);
+    border-radius: 25px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {

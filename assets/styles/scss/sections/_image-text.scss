@@ -26,11 +26,11 @@
             }
 
             img {
-                border-radius: var(--radius-12);
+                border-radius: 12px;
 
                 @media screen and (min-width: $breakpoint-s) {
                     max-width: 704px;
-                    border-radius: var(--radius-25);
+                    border-radius: 25px;
 
                     @media screen and (min-width: $breakpoint-m) {
                         width: 100%;
