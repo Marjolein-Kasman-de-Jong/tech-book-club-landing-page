@@ -9,14 +9,33 @@
 
         @media screen and (min-width: $breakpoint-s) {
             padding: var(--spacing-1000) 0;
+
+            @media screen and (min-width: $breakpoint-m) {
+                flex-direction: row;
+                gap: 80px;
+                padding: 120px 0;
+            }
         }
 
         .image-wrapper {
+            @media screen and (min-width: $breakpoint-m) {
+                flex-basis: 0;
+                flex: 560 1 0;
+                display: flex;
+                align-items: center;
+            }
+
             img {
                 border-radius: var(--radius-12);
 
                 @media screen and (min-width: $breakpoint-s) {
+                    max-width: 704px;
                     border-radius: var(--radius-25);
+
+                    @media screen and (min-width: $breakpoint-m) {
+                        width: 100%;
+                        border-radius: 20px;
+                    }
                 }
             }
         }
@@ -28,7 +47,19 @@
 
             @media screen and (min-width: $breakpoint-s) {
                 gap: 34px;
+
+                @media screen and (min-width: $breakpoint-m) {
+                    flex-basis: 0;
+                    flex: 530 1 0;
+                    justify-content: center;
+                }
+            }
+
+            .unordered-list {
+                @media screen and (min-width: $breakpoint-m) {
+                    width: 81.32%;
+                }
             }
         }
     }
-}
+};

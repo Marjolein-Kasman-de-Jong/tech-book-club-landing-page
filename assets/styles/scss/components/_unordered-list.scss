@@ -15,17 +15,75 @@
         position: relative;
         padding-left: 42px;
 
+        opacity: 0;
+        transform: translateY(12px);
+        transition: none;
+
         &::before {
             content: "";
             position: absolute;
             left: 0;
             top: 50%;
-            transform: translateY(-50%);
             width: 24px;
             height: 24px;
-            background-image: url("./assets/images/icon-check.svg");
+            background-image: url("/assets/images/icon-check.svg");
             background-repeat: no-repeat;
             background-size: contain;
+
+            opacity: 0;
+            transform: translateY(-50%) scale(0.8);
         }
+    }
+
+    &.is-visible {
+        li {
+            animation: list-item-in 0.5s ease forwards;
+            animation-delay: calc(var(--i) * 0.3s);
+
+            &::before {
+                animation: list-icon-in 0.4s ease forwards;
+                animation-delay: calc(var(--i) * 0.3s);
+            }
+        }
+    }
+}
+
+@keyframes list-item-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes list-icon-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .unordered-list li,
+    .unordered-list.is-visible li {
+        animation: none !important;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .unordered-list li::before,
+    .unordered-list.is-visible li::before {
+        animation: none !important;
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
     }
 }
