@@ -138,8 +138,8 @@
             overflow: hidden;
 
             @media screen and (min-width: $breakpoint-s) {
-                border-radius: 10px;
                 max-width: 704px;
+                border-radius: 10px;
 
                 @media screen and (min-width: $breakpoint-m) {
                     margin-top: unset;
@@ -147,6 +147,7 @@
                     min-width: 0;
                     max-width: unset;
                     flex: 540 1 0;
+                    border-radius: 8px;
                 }
             }
         }

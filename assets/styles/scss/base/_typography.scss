@@ -67,14 +67,14 @@ body {
     font-weight: 400;
     line-height: 140%;
     letter-spacing: -0.03125rem;
-}
 
-.text-preset-5-semibold {
-    font-family: var(--regular-paragraph);
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 140%;
-    letter-spacing: -0.03125rem;
+    strong {
+        font-family: var(--regular-paragraph);
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: -0.03125rem;
+    }
 }
 
 .text-preset-6 {
@@ -95,4 +95,33 @@ body {
     font-weight: 400;
     line-height: 120%;
     letter-spacing: -0.0625rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    strong {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% + 0.6em);
+            height: 1.45em;
+            transform: translate(-50%, -50%);
+            background-image: url("../../images/pattern-circle.png");
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
 }

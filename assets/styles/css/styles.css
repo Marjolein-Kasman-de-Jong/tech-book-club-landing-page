@@ -164,8 +164,7 @@ body {
   line-height: 140%;
   letter-spacing: -0.03125rem;
 }
-
-.text-preset-5-semibold {
+.text-preset-5-regular strong {
   font-family: var(--regular-paragraph);
   font-size: 1.25rem;
   font-weight: 600;
@@ -194,6 +193,52 @@ body {
   letter-spacing: -0.0625rem;
 }
 
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+h1 strong::after,
+h2 strong::after,
+h3 strong::after,
+h4 strong::after,
+h5 strong::after,
+h6 strong::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 0.6em);
+  height: 1.45em;
+  transform: translate(-50%, -50%);
+  background-image: url("../../images/pattern-circle.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media screen and (min-width: 768px) {
+  main {
+    gap: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  main {
+    gap: 120px;
+  }
+}
 main section {
   display: flex;
   justify-content: center;
@@ -350,8 +395,8 @@ main section .section-content-wrapper {
 }
 @media screen and (min-width: 768px) {
   .hero .section-content-wrapper .hero-image {
-    border-radius: 10px;
     max-width: 704px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -361,6 +406,7 @@ main section .section-content-wrapper {
     min-width: 0;
     max-width: unset;
     flex: 540 1 0;
+    border-radius: 8px;
   }
 }
 
@@ -368,18 +414,11 @@ main section .section-content-wrapper {
   display: flex;
   flex-direction: column-reverse;
   gap: 40px;
-  padding: 64px 0;
-}
-@media screen and (min-width: 768px) {
-  .image-text .section-content-wrapper {
-    padding: 80px 0;
-  }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .image-text .section-content-wrapper {
     flex-direction: row;
     gap: 80px;
-    padding: 120px 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -391,12 +430,12 @@ main section .section-content-wrapper {
   }
 }
 .image-text .section-content-wrapper .image-wrapper img {
-  border-radius: 12px;
+  border-radius: 12.25px;
 }
 @media screen and (min-width: 768px) {
   .image-text .section-content-wrapper .image-wrapper img {
     max-width: 704px;
-    border-radius: 25px;
+    border-radius: 25.143px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -425,6 +464,53 @@ main section .section-content-wrapper {
 @media screen and (min-width: 1200px) {
   .image-text .section-content-wrapper .text-wrapper .unordered-list {
     width: 81.32%;
+  }
+}
+
+.text-image .section-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .text-image .section-content-wrapper {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+.text-image .section-content-wrapper .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .text-image .section-content-wrapper .text-wrapper {
+    min-width: 0;
+    flex-basis: 0;
+    flex: 530 1 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-image .section-content-wrapper .image-wrapper {
+    min-width: 0;
+    flex-basis: 0;
+    flex: 560 1 0;
+  }
+}
+.text-image .section-content-wrapper .image-wrapper img {
+  border-radius: 12.25px;
+}
+@media screen and (min-width: 768px) {
+  .text-image .section-content-wrapper .image-wrapper img {
+    border-radius: 25.143px;
+    max-width: 704px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .text-image .section-content-wrapper .image-wrapper img {
+    width: 100%;
+    border-radius: 20px;
   }
 }
 
@@ -548,5 +634,3 @@ main section .section-content-wrapper {
     transform: translateY(-50%) scale(1);
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,51 @@
+@use "../base/breakpoints" as *;
+
+.text-image {
+    .section-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            @media screen and (min-width: $breakpoint-m) {
+                flex-direction: row;
+                gap: 80px;
+            }
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                min-width: 0;
+                flex-basis: 0;
+                flex: 530 1 0;
+            }
+        }
+
+        .image-wrapper {
+            @media screen and (min-width: $breakpoint-m) {
+                min-width: 0;
+                flex-basis: 0;
+                flex: 560 1 0;
+            }
+
+            img {
+                border-radius: 12.25px;
+
+                @media screen and (min-width: $breakpoint-s) {
+                    border-radius: 25.143px;
+                    max-width: 704px;
+
+                    @media screen and (min-width: $breakpoint-m) {
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

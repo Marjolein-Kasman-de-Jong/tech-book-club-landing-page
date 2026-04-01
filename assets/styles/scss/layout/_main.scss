@@ -1,6 +1,18 @@
 @use "../base/breakpoints" as *;
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @media screen and (min-width: $breakpoint-s) {
+        gap: 80px;
+
+        @media screen and (min-width: $breakpoint-m) {
+            gap: 120px;
+        }
+    }
+
     section {
         display: flex;
         justify-content: center;
