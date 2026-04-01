@@ -59,7 +59,17 @@
             .hero-content-title {
                 background: var(--gradient-1);
                 background-clip: text;
+                -webkit-background-clip: text;
                 color: transparent;
+                -webkit-text-fill-color: transparent;
+
+                strong {
+                    background: inherit;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
 
                 @media screen and (min-width: $breakpoint-s) {
                     width: 80%;
