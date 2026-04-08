@@ -603,6 +603,7 @@ main section .section-content-wrapper {
   gap: 32px;
   list-style: none;
   counter-reset: step;
+  padding-left: 0;
 }
 @media screen and (min-width: 768px) {
   .ordered-list {
@@ -622,6 +623,7 @@ main section .section-content-wrapper {
   flex-direction: column;
   gap: 20px;
   position: relative;
+  --arrow-draw-duration: 0.7s;
 }
 @media screen and (min-width: 768px) {
   .ordered-list li {
@@ -644,24 +646,52 @@ main section .section-content-wrapper {
     height: 40px;
   }
 }
+.ordered-list li .ordered-list-arrow {
+  display: none;
+}
 @media screen and (min-width: 1200px) {
-  .ordered-list li::after {
-    content: "";
+  .ordered-list li .ordered-list-arrow {
+    display: block;
     position: absolute;
     z-index: 100;
     right: 0;
     top: 0;
     width: 76.737px;
     height: 20.511px;
-    background-image: url("../../images/pattern-arrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    overflow: visible;
   }
 }
-.ordered-list li:last-of-type::after {
+.ordered-list li .ordered-list-arrow path {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+}
+.ordered-list li .ordered-list-arrow path:last-of-type {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+}
+.ordered-list li:last-of-type .ordered-list-arrow {
   display: none;
 }
+.ordered-list.is-visible li .ordered-list-arrow path {
+  animation: draw-arrow var(--arrow-draw-duration) ease forwards;
+  animation-delay: calc(var(--i) * var(--arrow-draw-duration));
+}
+.ordered-list.is-visible li .ordered-list-arrow path:last-of-type {
+  animation-delay: calc(var(--i) * var(--arrow-draw-duration) + 0.28s);
+}
 
+@keyframes draw-arrow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ordered-list li .ordered-list-arrow path,
+  .ordered-list.is-visible li .ordered-list-arrow path {
+    animation: none !important;
+    stroke-dashoffset: 0;
+  }
+}
 .unordered-list {
   display: flex;
   flex-direction: column;

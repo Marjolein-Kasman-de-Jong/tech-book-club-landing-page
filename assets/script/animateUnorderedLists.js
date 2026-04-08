@@ -1,4 +1,4 @@
-const unorderedLists = document.querySelectorAll('.unordered-list');
+const lists = document.querySelectorAll('.unordered-list, .ordered-list');
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -19,6 +19,6 @@ const observer = new IntersectionObserver((entries, observer) => {
     threshold: 0.5
 });
 
-unorderedLists.forEach(list => {
+lists.forEach(list => {
     observer.observe(list);
 });

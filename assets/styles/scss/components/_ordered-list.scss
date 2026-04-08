@@ -6,6 +6,7 @@
     gap: 32px;
     list-style: none;
     counter-reset: step;
+    padding-left: 0;
 
     @media screen and (min-width: $breakpoint-s) {
         gap: 40px;
@@ -23,6 +24,8 @@
         flex-direction: column;
         gap: 20px;
         position: relative;
+
+        --arrow-draw-duration: 0.7s;
 
         @media screen and (min-width: $breakpoint-s) {
             gap: 24px;
@@ -44,25 +47,60 @@
             }
         }
 
-        &::after {
+        .ordered-list-arrow {
+            display: none;
+
             @media screen and (min-width: $breakpoint-m) {
-                content: "";
+                display: block;
                 position: absolute;
                 z-index: 100;
                 right: 0;
                 top: 0;
                 width: 76.737px;
                 height: 20.511px;
-                background-image: url("../../images/pattern-arrow.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
+                overflow: visible;
+            }
+
+            path {
+                stroke-dasharray: 160;
+                stroke-dashoffset: 160;
+            }
+
+            path:last-of-type {
+                stroke-dasharray: 70;
+                stroke-dashoffset: 70;
             }
         }
 
         &:last-of-type {
-            &::after {
+            .ordered-list-arrow {
                 display: none;
             }
         }
+    }
+
+    &.is-visible {
+        li .ordered-list-arrow path {
+            animation: draw-arrow var(--arrow-draw-duration) ease forwards;
+            animation-delay: calc(var(--i) * var(--arrow-draw-duration));
+        }
+
+        li .ordered-list-arrow path:last-of-type {
+            animation-delay: calc((var(--i) * var(--arrow-draw-duration)) + 0.28s);
+        }
+    }
+}
+
+@keyframes draw-arrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ordered-list li .ordered-list-arrow path,
+    .ordered-list.is-visible li .ordered-list-arrow path {
+        animation: none !important;
+        stroke-dashoffset: 0;
     }
 }
