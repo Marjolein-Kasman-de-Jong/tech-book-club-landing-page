@@ -6,13 +6,19 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
+    height: 356px;
     
+    @media screen and (min-width: $breakpoint-s) {
+        height: 358px;
+    }
+
     &:nth-of-type(2) {
         position: relative;
         overflow: hidden;
         background-color: var(--neutral-100);
 
         @media screen and (min-width: $breakpoint-m) {
+            height: 390px;
             padding: 40px 24px;
         }
 
@@ -21,7 +27,6 @@
             position: absolute;
             bottom: -530px;
             right: -368px;
-            // z-index: 0;
             width: 684px;
             height: 684px;
             border-radius: 50%;
@@ -53,19 +58,6 @@
         border-right: none;
         border-bottom: none;
         margin: 24px 0;
-    }
-
-    .unordered-list {
-        // Fix button overlapping ul
-        // min-height: 84px;
-
-        @media screen and (min-width: $breakpoint-s) {
-            // min-height: 88px;
-
-            @media screen and (min-width: $breakpoint-m) {
-                // min-height: 90px;
-            }
-        }
     }
 
     .membership-options-button {

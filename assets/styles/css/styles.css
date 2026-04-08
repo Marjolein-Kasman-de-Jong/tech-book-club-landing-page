@@ -642,6 +642,12 @@ main section .section-content-wrapper {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  height: 356px;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    height: 358px;
+  }
 }
 .card:nth-of-type(2) {
   position: relative;
@@ -650,6 +656,7 @@ main section .section-content-wrapper {
 }
 @media screen and (min-width: 1200px) {
   .card:nth-of-type(2) {
+    height: 390px;
     padding: 40px 24px;
   }
 }
@@ -802,7 +809,6 @@ main section .section-content-wrapper {
   position: relative;
   padding-left: 42px;
   opacity: 0;
-  transform: translateY(12px);
   transition: none;
 }
 .unordered-list li::before {
