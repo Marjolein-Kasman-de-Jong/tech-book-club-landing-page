@@ -1,0 +1,76 @@
+@use "../base/breakpoints" as *;
+
+.card {
+    border: 1px solid var(--neutral-200);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    
+    &:nth-of-type(2) {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--neutral-100);
+
+        @media screen and (min-width: $breakpoint-m) {
+            padding: 40px 24px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -530px;
+            right: -368px;
+            // z-index: 0;
+            width: 684px;
+            height: 684px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .4;
+            background-color: var(--decoration);
+        }
+    }
+
+    .card-header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .card-header-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .card-header-price-period {
+                color: var(--neutral-700);
+            }
+        }
+    }
+
+    hr {
+        border-top: 1px solid var(--neutral-200);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        margin: 24px 0;
+    }
+
+    .unordered-list {
+        // Fix button overlapping ul
+        // min-height: 84px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            // min-height: 88px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                // min-height: 90px;
+            }
+        }
+    }
+
+    .membership-options-button {
+        margin-top: 32px;
+        position: relative;
+        z-index: 10;
+    }
+}

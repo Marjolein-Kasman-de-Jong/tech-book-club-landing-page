@@ -34,15 +34,10 @@ body {
 
 .text-preset-3 {
     font-family: var(--headings);
-    font-size: 1.5rem;
+    font-size: 2.125rem;
     font-weight: 600;
-    line-height: 110%;
+    line-height: 130%;
     letter-spacing: -0.0625rem;
-
-    @media screen and (min-width: $breakpoint-s) {
-        font-size: 2.125rem;
-        line-height: 130%;
-    }
 }
 
 .text-preset-4-regular {

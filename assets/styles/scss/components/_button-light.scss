@@ -3,7 +3,6 @@
 .button-light {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 380px;
@@ -55,4 +54,12 @@
         position: relative;
         z-index: 1;
     }
+}
+
+.button-light.hero-content-button {
+    justify-content: space-between;
+}
+
+.button-light.membership-options-button {
+    justify-content: center;
 }

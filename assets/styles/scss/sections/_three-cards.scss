@@ -1,0 +1,39 @@
+@use "../base/breakpoints" as *;
+
+.three-cards {
+    .section-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            gap: 40px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                gap: 64px;
+                align-items: center;
+            }
+        }
+
+        h2 {
+            @media screen and (min-width: $breakpoint-m) {
+                text-align: center;
+            }
+        }
+
+        .cards-wrapper {
+            display: grid;
+            gap: 24px;
+
+            @media screen and (min-width: $breakpoint-s) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            @media screen and (min-width: $breakpoint-m) {
+                width: 82.91%;
+                grid-template-columns: 286fr 350fr 286fr;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -85,3 +85,9 @@
         transform: translateY(-50%) scale(1);
     }
 }
+
+.card .unordered-list {
+    @media screen and (min-width: $breakpoint-s) {
+        gap: 16px;
+    }
+}
