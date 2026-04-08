@@ -1,0 +1,29 @@
+@use "../base/breakpoints" as *;
+
+.steps {
+    .section-content-wrapper {
+        padding: 64px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        background: url("../../images/pattern-light-bg.svg"), var(--accent-50);
+        border-radius: 12px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            padding: 80px 32px;
+            gap: 48px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                align-items: center;
+                gap: 64px;
+                padding: 64px 0;
+            }
+        }
+
+        h2 {
+            @media screen and (min-width: $breakpoint-m) {
+                text-align: center;
+            }
+        }
+    }
+}

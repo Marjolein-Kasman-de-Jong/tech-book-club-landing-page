@@ -523,6 +523,33 @@ main section .section-content-wrapper {
   }
 }
 
+.steps .section-content-wrapper {
+  padding: 64px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: url("../../images/pattern-light-bg.svg"), var(--accent-50);
+  border-radius: 12px;
+}
+@media screen and (min-width: 768px) {
+  .steps .section-content-wrapper {
+    padding: 80px 32px;
+    gap: 48px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .steps .section-content-wrapper {
+    align-items: center;
+    gap: 64px;
+    padding: 64px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .steps .section-content-wrapper h2 {
+    text-align: center;
+  }
+}
+
 .button-light {
   position: relative;
   display: flex;
@@ -568,6 +595,71 @@ main section .section-content-wrapper {
 .button-light > * {
   position: relative;
   z-index: 1;
+}
+
+.ordered-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  counter-reset: step;
+}
+@media screen and (min-width: 768px) {
+  .ordered-list {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .ordered-list {
+    width: 89.74%;
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+.ordered-list li {
+  counter-increment: step;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .ordered-list li {
+    gap: 24px;
+  }
+}
+.ordered-list li::before {
+  content: counter(step);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--neutral-900);
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .ordered-list li::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ordered-list li::after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    width: 76.737px;
+    height: 20.511px;
+    background-image: url("../../images/pattern-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.ordered-list li:last-of-type::after {
+  display: none;
 }
 
 .unordered-list {
@@ -643,3 +735,5 @@ main section .section-content-wrapper {
     transform: translateY(-50%) scale(1);
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,68 @@
+@use "../base/breakpoints" as *;
+
+.ordered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+    counter-reset: step;
+
+    @media screen and (min-width: $breakpoint-s) {
+        gap: 40px;
+
+        @media screen and (min-width: $breakpoint-m) {
+            width: 89.74%;
+            flex-direction: row;
+            gap: 48px;
+        }
+    }
+
+    li {
+        counter-increment: step;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        @media screen and (min-width: $breakpoint-s) {
+            gap: 24px;
+        }
+
+        &::before {
+            content: counter(step);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--neutral-900);
+            border-radius: 4px;
+
+            @media screen and (min-width: $breakpoint-s) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &::after {
+            @media screen and (min-width: $breakpoint-m) {
+                content: "";
+                position: absolute;
+                z-index: 100;
+                right: 0;
+                top: 0;
+                width: 76.737px;
+                height: 20.511px;
+                background-image: url("../../images/pattern-arrow.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
