@@ -22,16 +22,15 @@
         }
 
         .cards-wrapper {
-            display: grid;
+            display: flex;
             gap: 24px;
-
-            @media screen and (min-width: $breakpoint-s) {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+            flex-wrap: wrap;
+            width: 100%;
 
             @media screen and (min-width: $breakpoint-m) {
                 width: 82.91%;
-                grid-template-columns: 286fr 350fr 286fr;
+                flex-wrap: nowrap;
+                justify-content: center;
                 align-items: center;
             }
         }

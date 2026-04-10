@@ -566,18 +566,16 @@ main section .section-content-wrapper {
   }
 }
 .three-cards .section-content-wrapper .cards-wrapper {
-  display: grid;
+  display: flex;
   gap: 24px;
-}
-@media screen and (min-width: 768px) {
-  .three-cards .section-content-wrapper .cards-wrapper {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  flex-wrap: wrap;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .three-cards .section-content-wrapper .cards-wrapper {
     width: 82.91%;
-    grid-template-columns: 286fr 350fr 286fr;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -588,7 +586,6 @@ main section .section-content-wrapper {
   align-items: center;
   width: 100%;
   max-width: 380px;
-  padding: 20px 24px;
   background-color: var(--accent-50);
   border: 2px solid var(--neutral-900);
   border-radius: 8px;
@@ -630,10 +627,18 @@ main section .section-content-wrapper {
 
 .button-light.hero-content-button {
   justify-content: space-between;
+  height: 64px;
+  padding: 0 24px;
 }
 
 .button-light.membership-options-button {
   justify-content: center;
+  height: 61px;
+}
+@media screen and (min-width: 768px) {
+  .button-light.membership-options-button {
+    height: 63px;
+  }
 }
 
 .card {
@@ -642,11 +647,13 @@ main section .section-content-wrapper {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  height: 356px;
+  width: 100%;
+  max-width: 340px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .card {
-    height: 358px;
+    max-width: none;
+    flex: 0 1 286px;
   }
 }
 .card:nth-of-type(2) {
@@ -656,8 +663,8 @@ main section .section-content-wrapper {
 }
 @media screen and (min-width: 1200px) {
   .card:nth-of-type(2) {
-    height: 390px;
     padding: 40px 24px;
+    flex: 0 1 350px;
   }
 }
 .card:nth-of-type(2)::after {

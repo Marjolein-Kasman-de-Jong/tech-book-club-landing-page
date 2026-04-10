@@ -6,10 +6,12 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    height: 356px;
-    
-    @media screen and (min-width: $breakpoint-s) {
-        height: 358px;
+    width: 100%;
+    max-width: 340px;
+
+    @media screen and (min-width: $breakpoint-m) {
+        max-width: none;
+        flex: 0 1 286px;
     }
 
     &:nth-of-type(2) {
@@ -18,8 +20,8 @@
         background-color: var(--neutral-100);
 
         @media screen and (min-width: $breakpoint-m) {
-            height: 390px;
             padding: 40px 24px;
+            flex: 0 1 350px;
         }
 
         &::after {
