@@ -1,0 +1,45 @@
+@use "../base/breakpoints" as *;
+
+.social-proof {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @media screen and (min-width: $breakpoint-s) {
+        width: 55.12%;
+
+        @media screen and (min-width: $breakpoint-m) {
+            width: 68.07%;
+        }
+    }
+
+    .social-proof-avatars {
+        width: 100%;
+        min-width: 0;
+        flex: 110 1 0;
+    }
+
+    .social-proof-rating {
+        width: 100%;
+        min-width: 0;
+        flex: 221 1 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        @media screen and (min-width: $breakpoint-s) {
+            flex: 266 1 0;
+        }
+
+        .social-proof-rating-stars {
+            display: flex;
+            justify-content: left;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

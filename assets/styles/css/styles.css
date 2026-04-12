@@ -363,48 +363,6 @@ main section .section-content-wrapper {
 .hero .section-content-wrapper .hero-content .hero-content-button {
   margin-top: 32px;
 }
-.hero .section-content-wrapper .hero-content .hero-content-social-proof {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-@media screen and (min-width: 768px) {
-  .hero .section-content-wrapper .hero-content .hero-content-social-proof {
-    width: 55.12%;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .hero .section-content-wrapper .hero-content .hero-content-social-proof {
-    width: 68.07%;
-  }
-}
-.hero .section-content-wrapper .hero-content .hero-content-social-proof .hero-content-social-proof-avatars {
-  width: 100%;
-  min-width: 0;
-  flex: 110 1 0;
-}
-.hero .section-content-wrapper .hero-content .hero-content-social-proof .hero-content-social-proof-rating {
-  width: 100%;
-  min-width: 0;
-  flex: 221 1 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-@media screen and (min-width: 768px) {
-  .hero .section-content-wrapper .hero-content .hero-content-social-proof .hero-content-social-proof-rating {
-    flex: 266 1 0;
-  }
-}
-.hero .section-content-wrapper .hero-content .hero-content-social-proof .hero-content-social-proof-rating .hero-content-social-proof-rating-stars {
-  display: flex;
-  justify-content: left;
-}
-.hero .section-content-wrapper .hero-content .hero-content-social-proof .hero-content-social-proof-rating .hero-content-social-proof-rating-stars img {
-  width: 24px;
-  height: 24px;
-}
 .hero .section-content-wrapper .hero-image {
   margin-top: 64px;
   border-radius: 5px;
@@ -846,6 +804,49 @@ main section .section-content-wrapper {
     stroke-dashoffset: 0;
   }
 }
+.social-proof {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  .social-proof {
+    width: 55.12%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .social-proof {
+    width: 68.07%;
+  }
+}
+.social-proof .social-proof-avatars {
+  width: 100%;
+  min-width: 0;
+  flex: 110 1 0;
+}
+.social-proof .social-proof-rating {
+  width: 100%;
+  min-width: 0;
+  flex: 221 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media screen and (min-width: 768px) {
+  .social-proof .social-proof-rating {
+    flex: 266 1 0;
+  }
+}
+.social-proof .social-proof-rating .social-proof-rating-stars {
+  display: flex;
+  justify-content: left;
+}
+.social-proof .social-proof-rating .social-proof-rating-stars img {
+  width: 24px;
+  height: 24px;
+}
+
 .unordered-list {
   display: flex;
   flex-direction: column;
