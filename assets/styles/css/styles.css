@@ -617,8 +617,10 @@ main section .section-content-wrapper {
   justify-content: flex-start;
   gap: 6px;
 }
-.testimonial .section-content-wrapper .testimonial-content .testimonial-quote {
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .testimonial .section-content-wrapper .testimonial-content .testimonial-quote {
+    text-align: center;
+  }
 }
 .testimonial .section-content-wrapper .testimonial-content .testimonial-author {
   color: var(--neutral-700);

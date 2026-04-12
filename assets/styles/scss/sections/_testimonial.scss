@@ -25,7 +25,9 @@
             }
 
             .testimonial-quote {
-                text-align: center;
+                @media screen and (min-width: $breakpoint-m) {
+                    text-align: center;
+                }
             }
 
             .testimonial-author {
