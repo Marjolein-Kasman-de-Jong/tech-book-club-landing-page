@@ -1,6 +1,16 @@
 @use "../base/breakpoints" as *;
 
 .testimonial {
+    padding: 0 0 64px 0;
+
+    @media screen and (min-width: $breakpoint-s) {
+        padding: 0 0 80px 0;
+
+        @media screen and (min-width: $breakpoint-m) {
+            padding: 0 0 120px 0;
+        }
+    }
+
     .section-content-wrapper {
         @media screen and (min-width: $breakpoint-m) {
             display: flex;

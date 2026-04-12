@@ -60,6 +60,7 @@ video {
   --decoration: #9CC9DA;
   --gradient-1: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
   --gradient-2: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+  --gradient-3: linear-gradient(90deg, #385159 0%, #062630 100%);
   /* spacing */
   --spacing-0: 0px;
   --spacing-025: 2px;
@@ -266,6 +267,59 @@ main section .section-content-wrapper {
   }
 }
 
+.page-footer {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0 0 0;
+  background-color: var(--neutral-900);
+  color: var(--neutral-100);
+  border-radius: 16px 16px 0 0;
+}
+@media screen and (min-width: 768px) {
+  .page-footer {
+    padding: 64px 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .page-footer {
+    padding: 80px 0 0 0;
+  }
+}
+.page-footer .footer-content-wrapper {
+  width: 91.47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .footer-content-wrapper {
+    width: 91.67%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .page-footer .footer-content-wrapper {
+    width: 82.15%;
+    max-width: 1440px;
+  }
+}
+.page-footer .footer-content-wrapper p {
+  text-align: center;
+}
+.page-footer .footer-content-wrapper .footer-button {
+  margin-top: 40px;
+}
+.page-footer .footer-content-wrapper .social-proof {
+  margin-top: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .page-footer .footer-content-wrapper .social-proof {
+    width: 388px;
+  }
+}
+.page-footer .footer-content-wrapper .social-proof .social-proof-rating .social-proof-rating-text {
+  text-align: left;
+}
+
 .hero {
   position: relative;
   background: url("../../images/pattern-light-bg.svg"), var(--accent-50);
@@ -362,6 +416,9 @@ main section .section-content-wrapper {
 }
 .hero .section-content-wrapper .hero-content .hero-content-button {
   margin-top: 32px;
+}
+.hero .section-content-wrapper .hero-content .social-proof {
+  margin-top: 20px;
 }
 .hero .section-content-wrapper .hero-image {
   margin-top: 64px;
@@ -552,6 +609,19 @@ main section .section-content-wrapper {
   }
 }
 
+.testimonial {
+  padding: 0 0 64px 0;
+}
+@media screen and (min-width: 768px) {
+  .testimonial {
+    padding: 0 0 80px 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .testimonial {
+    padding: 0 0 120px 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .testimonial .section-content-wrapper {
     display: flex;
@@ -584,19 +654,17 @@ main section .section-content-wrapper {
   color: var(--neutral-700);
 }
 
-.button-light {
+[class*=button-] {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 380px;
-  background-color: var(--accent-50);
-  border: 2px solid var(--neutral-900);
   border-radius: 8px;
   text-transform: uppercase;
   overflow: hidden;
 }
-.button-light::before {
+[class*=button-]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -604,29 +672,54 @@ main section .section-content-wrapper {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: var(--gradient-2);
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 @media screen and (min-width: 1200px) {
-  .button-light:hover, .button-light:focus {
+  [class*=button-]:hover, [class*=button-]:focus {
     cursor: pointer;
   }
-  .button-light:hover::before, .button-light:focus::before {
+  [class*=button-]:hover::before, [class*=button-]:focus::before {
     opacity: 1;
   }
 }
+[class*=button-]:focus {
+  outline-offset: 2px;
+}
+[class*=button-]:link, [class*=button-]:visited, [class*=button-]:hover, [class*=button-]:active {
+  text-decoration: none;
+}
+[class*=button-] > * {
+  position: relative;
+  z-index: 1;
+}
+
+.button-light {
+  background-color: var(--accent-50);
+  border: 2px solid var(--neutral-900);
+}
+.button-light::before {
+  background: var(--gradient-2);
+}
 .button-light:focus {
   outline: 2px solid var(--neutral-900);
-  outline-offset: 2px;
 }
 .button-light:link, .button-light:visited, .button-light:hover, .button-light:active {
   color: var(--neutral-900);
-  text-decoration: none;
 }
-.button-light > * {
-  position: relative;
-  z-index: 1;
+
+.button-dark {
+  background-color: var(--neutral-900);
+  border: 2px solid var(--neutral-0);
+}
+.button-dark::before {
+  background: var(--gradient-3);
+}
+.button-dark:focus {
+  outline: 2px solid var(--neutral-0);
+}
+.button-dark:link, .button-dark:visited, .button-dark:hover, .button-dark:active {
+  color: var(--neutral-0);
 }
 
 .button-light.hero-content-button {
@@ -643,6 +736,12 @@ main section .section-content-wrapper {
   .button-light.membership-options-button {
     height: 63px;
   }
+}
+
+.button-dark.footer-button {
+  justify-content: center;
+  gap: 16px;
+  height: 64px;
 }
 
 .card {
@@ -805,7 +904,6 @@ main section .section-content-wrapper {
   }
 }
 .social-proof {
-  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 12px;

@@ -1,13 +1,11 @@
 @use "../base/breakpoints" as *;
 
-.button-light {
+[class*="button-"] {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 380px;
-    background-color: var(--accent-50);
-    border: 2px solid var(--neutral-900);
     border-radius: 8px;
     text-transform: uppercase;
     overflow: hidden;
@@ -20,7 +18,6 @@
         z-index: 0;
         width: 100%;
         height: 100%;
-        background: var(--gradient-2);
         opacity: 0;
         transition: opacity .3s ease-in;
     }
@@ -37,7 +34,6 @@
     }
 
     &:focus {
-        outline: 2px solid var(--neutral-900);
         outline-offset: 2px;
     }
 
@@ -45,13 +41,52 @@
     &:visited,
     &:hover,
     &:active {
-        color: var(--neutral-900);
         text-decoration: none;
     }
 
     >* {
         position: relative;
         z-index: 1;
+    }
+}
+
+.button-light {
+    background-color: var(--accent-50);
+    border: 2px solid var(--neutral-900);
+
+    &::before {
+        background: var(--gradient-2);
+    }
+
+    &:focus {
+        outline: 2px solid var(--neutral-900);
+    }
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: var(--neutral-900);
+    }
+}
+
+.button-dark {
+    background-color: var(--neutral-900);
+    border: 2px solid var(--neutral-0);
+
+    &::before {
+        background: var(--gradient-3);
+    }
+
+    &:focus {
+        outline: 2px solid var(--neutral-0);
+    }
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: var(--neutral-0);
     }
 }
 
@@ -68,4 +103,10 @@
     @media screen and (min-width: $breakpoint-s) {
         height: 63px;
     }
+}
+
+.button-dark.footer-button {
+    justify-content: center;
+    gap: 16px;
+    height: 64px;
 }

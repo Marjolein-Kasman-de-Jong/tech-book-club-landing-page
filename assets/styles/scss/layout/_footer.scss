@@ -1,5 +1,56 @@
 @use "../base/breakpoints" as *;
 
 .page-footer {
-    
+    display: flex;
+    justify-content: center;
+    padding: 48px 0 0 0;
+    background-color: var(--neutral-900);
+    color: var(--neutral-100);
+    border-radius: 16px 16px 0 0;
+
+    @media screen and (min-width: $breakpoint-s) {
+        padding: 64px 0 0 0;
+
+        @media screen and (min-width: $breakpoint-m) {
+            padding: 80px 0 0 0;
+        }
+    }
+
+    .footer-content-wrapper {
+        width: 91.47%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-s) {
+            width: 91.67%;
+
+            @media screen and (min-width: $breakpoint-m) {
+                width: 82.15%;
+                max-width: 1440px;
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .footer-button {
+            margin-top: 40px;
+        }
+
+        .social-proof {
+            margin-top: 24px;
+
+            @media screen and (min-width: $breakpoint-m) {
+                width: 388px;
+            }
+
+            .social-proof-rating {
+                .social-proof-rating-text {
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
