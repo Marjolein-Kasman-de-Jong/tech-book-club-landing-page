@@ -17,7 +17,7 @@ Users should be able to:
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Marjolein-Kasman-de-Jong/tech-book-club-landing-page.git
    cd tech-book-club-landing-page
    ```
 
