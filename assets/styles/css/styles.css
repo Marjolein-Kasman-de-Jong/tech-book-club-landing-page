@@ -311,11 +311,6 @@ main section .section-content-wrapper {
 .page-footer .footer-content-wrapper .social-proof {
   margin-top: 24px;
 }
-@media screen and (min-width: 1200px) {
-  .page-footer .footer-content-wrapper .social-proof {
-    width: 388px;
-  }
-}
 .page-footer .footer-content-wrapper .social-proof .social-proof-rating .social-proof-rating-text {
   text-align: left;
 }
@@ -913,11 +908,6 @@ main section .section-content-wrapper {
     width: 55.12%;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .social-proof {
-    width: 68.07%;
-  }
-}
 .social-proof .social-proof-avatars {
   width: 100%;
   min-width: 0;
@@ -943,6 +933,18 @@ main section .section-content-wrapper {
 .social-proof .social-proof-rating .social-proof-rating-stars img {
   width: 24px;
   height: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .social-proof {
+    width: 68.07%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer .social-proof {
+    width: 388px;
+  }
 }
 
 .unordered-list {

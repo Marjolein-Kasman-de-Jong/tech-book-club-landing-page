@@ -7,10 +7,6 @@
 
     @media screen and (min-width: $breakpoint-s) {
         width: 55.12%;
-
-        @media screen and (min-width: $breakpoint-m) {
-            width: 68.07%;
-        }
     }
 
     .social-proof-avatars {
@@ -40,5 +36,17 @@
                 height: 24px;
             }
         }
+    }
+}
+
+.hero .social-proof {
+    @media screen and (min-width: $breakpoint-m) {
+        width: 68.07%;
+    }
+}
+
+.page-footer .social-proof {
+    @media screen and (min-width: $breakpoint-m) {
+        width: 388px;
     }
 }

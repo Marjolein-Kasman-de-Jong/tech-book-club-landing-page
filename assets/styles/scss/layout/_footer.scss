@@ -42,10 +42,6 @@
         .social-proof {
             margin-top: 24px;
 
-            @media screen and (min-width: $breakpoint-m) {
-                width: 388px;
-            }
-
             .social-proof-rating {
                 .social-proof-rating-text {
                     text-align: left;
