@@ -1,5 +1,9 @@
 @use "../base/breakpoints" as *;
 
+#membership-options {
+    scroll-margin-top: 96px;
+}
+
 .three-cards {
     .section-content-wrapper {
         display: flex;

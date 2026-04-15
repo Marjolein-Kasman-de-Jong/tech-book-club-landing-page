@@ -33,8 +33,14 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 body {
   position: relative;
   min-height: 100vh;
@@ -600,6 +606,10 @@ main section .section-content-wrapper {
   .steps .section-content-wrapper h2 {
     text-align: center;
   }
+}
+
+#membership-options {
+  scroll-margin-top: 96px;
 }
 
 .three-cards .section-content-wrapper {
