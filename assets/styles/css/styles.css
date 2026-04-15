@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
 }
 
@@ -203,6 +204,29 @@ h6 strong::after {
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: -1;
+}
+
+.page-header {
+  width: 100%;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+}
+.page-header .header-content-wrapper {
+  width: 91.47%;
+}
+@media screen and (min-width: 768px) {
+  .page-header .header-content-wrapper {
+    width: 91.67%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .page-header .header-content-wrapper {
+    width: 82.39%;
+  }
 }
 
 main {

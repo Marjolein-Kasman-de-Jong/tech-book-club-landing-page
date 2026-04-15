@@ -1,1 +1,23 @@
 @use "../base/breakpoints" as *;
+
+.page-header {
+    width: 100%;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+
+    .header-content-wrapper {
+        width: 91.47%;
+
+        @media screen and (min-width: $breakpoint-s) {
+            width: 91.67%;
+
+            @media screen and (min-width: $breakpoint-m) {
+                width: 82.39%;
+            }
+        }
+    }
+}
