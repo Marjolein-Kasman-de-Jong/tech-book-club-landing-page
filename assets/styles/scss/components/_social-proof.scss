@@ -5,10 +5,6 @@
     align-items: center;
     gap: 12px;
 
-    @media screen and (min-width: $breakpoint-s) {
-        width: 55.12%;
-    }
-
     .social-proof-avatars {
         width: 100%;
         min-width: 0;
@@ -40,13 +36,20 @@
 }
 
 .hero .social-proof {
-    @media screen and (min-width: $breakpoint-m) {
-        width: 68.07%;
+    @media screen and (min-width: $breakpoint-s) {
+        width: 55.12%;
+
+        @media screen and (min-width: $breakpoint-m) {
+            width: 68.07%;
+        }
     }
 }
 
 .page-footer .social-proof {
-    @media screen and (min-width: $breakpoint-m) {
-        width: 388px;
+    width: 100%;
+    max-width: 343px;
+
+    @media screen and (min-width: $breakpoint-s) {
+        max-width: 388px;
     }
 }

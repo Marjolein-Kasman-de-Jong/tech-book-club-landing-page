@@ -61,34 +61,6 @@ video {
   --gradient-1: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
   --gradient-2: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
   --gradient-3: linear-gradient(90deg, #385159 0%, #062630 100%);
-  /* spacing */
-  --spacing-0: 0px;
-  --spacing-025: 2px;
-  --spacing-050: 4px;
-  --spacing-075: 6px;
-  --spacing-100: 8px;
-  --spacing-150: 12px;
-  --spacing-200: 16px;
-  --spacing-250: 20px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-800: 64px;
-  --spacing-1000: 80px;
-  /* radius */
-  --radius-0: 0;
-  --radius-4: 4px;
-  --radius-5: 5px;
-  --radius-6: 6px;
-  --radius-8: 8px;
-  --radius-10: 10px;
-  --radius-12: 12px;
-  --radius-16: 16px;
-  --radius-20: 20px;
-  --radius-24: 24px;
-  --radius-25: 25px;
-  --radius-full: 999px;
   /* fonts */
   --headings: "Martian Mono", sans-serif;
   --regular-paragraph: "Inter", sans-serif;
@@ -269,7 +241,8 @@ main section .section-content-wrapper {
 
 .page-footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 48px 0 0 0;
   background-color: var(--neutral-900);
   color: var(--neutral-100);
@@ -290,6 +263,7 @@ main section .section-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 64px;
 }
 @media screen and (min-width: 768px) {
   .page-footer .footer-content-wrapper {
@@ -313,6 +287,42 @@ main section .section-content-wrapper {
 }
 .page-footer .footer-content-wrapper .social-proof .social-proof-rating .social-proof-rating-text {
   text-align: left;
+}
+.page-footer hr {
+  width: 91.47%;
+  border-top: 1px solid var(--neutral-700);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+@media screen and (min-width: 768px) {
+  .page-footer hr {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .page-footer hr {
+    width: 82.15%;
+  }
+}
+.page-footer .footer-bottom {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .footer-bottom {
+    width: 91.67%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .page-footer .footer-bottom {
+    width: 82.15%;
+  }
 }
 
 .hero {
@@ -660,13 +670,6 @@ main section .section-content-wrapper {
   overflow: hidden;
 }
 [class*=button-]::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
@@ -677,6 +680,15 @@ main section .section-content-wrapper {
   [class*=button-]:hover::before, [class*=button-]:focus::before {
     opacity: 1;
   }
+}
+[class*=button-]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 [class*=button-]:focus {
   outline-offset: 2px;
@@ -898,15 +910,25 @@ main section .section-content-wrapper {
     stroke-dashoffset: 0;
   }
 }
+.social-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.social-links li {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+.social-links li:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .social-proof {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-@media screen and (min-width: 768px) {
-  .social-proof {
-    width: 55.12%;
-  }
 }
 .social-proof .social-proof-avatars {
   width: 100%;
@@ -935,15 +957,24 @@ main section .section-content-wrapper {
   height: 24px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  .hero .social-proof {
+    width: 55.12%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .hero .social-proof {
     width: 68.07%;
   }
 }
 
-@media screen and (min-width: 1200px) {
+.page-footer .social-proof {
+  width: 100%;
+  max-width: 343px;
+}
+@media screen and (min-width: 768px) {
   .page-footer .social-proof {
-    width: 388px;
+    max-width: 388px;
   }
 }
 
@@ -963,7 +994,6 @@ main section .section-content-wrapper {
   position: relative;
   padding-left: 42px;
   opacity: 0;
-  transition: none;
 }
 .unordered-list li::before {
   content: "";

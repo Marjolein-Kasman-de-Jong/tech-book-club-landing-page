@@ -1,0 +1,13 @@
+@use "../base/breakpoints" as *;
+@use "../base/transitions";
+
+.social-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    li {
+        @include transitions.transition-social-links(1, .6);
+    }
+}

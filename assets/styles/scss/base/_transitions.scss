@@ -1,0 +1,32 @@
+@use "../base/breakpoints" as *;
+
+$transition-duration: .3s;
+$transition-timing-function: ease-in;
+
+@mixin transition-social-links($opacity-start, $opacity-end) {
+    opacity: $opacity-start;
+    transition: opacity $transition-duration $transition-timing-function;
+
+    &:hover {
+        cursor: pointer;
+        opacity: $opacity-end;
+    }
+}
+
+@mixin transition-buttons($opacity-start, $opacity-end) {
+    &::before {
+        opacity: $opacity-start;
+        transition: opacity $transition-duration $transition-timing-function;
+    }
+
+    &:hover,
+    &:focus {
+        @media screen and (min-width: $breakpoint-m) {
+            cursor: pointer;
+
+            &::before {
+                opacity: $opacity-end;
+            }
+        }
+    }
+}

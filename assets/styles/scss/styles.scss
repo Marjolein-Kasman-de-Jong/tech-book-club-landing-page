@@ -1,4 +1,5 @@
 @use "base/fonts";
+@use "base/transitions";
 @use "base/reset";
 @use "base/variables";
 @use "base/breakpoints";
@@ -18,5 +19,6 @@
 @use "components/button";
 @use "components/card";
 @use "components/ordered-list";
+@use "components/social-links";
 @use "components/social-proof";
 @use "components/unordered-list";

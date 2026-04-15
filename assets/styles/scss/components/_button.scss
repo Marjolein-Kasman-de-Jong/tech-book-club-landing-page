@@ -1,4 +1,5 @@
 @use "../base/breakpoints" as *;
+@use "../base/transitions";
 
 [class*="button-"] {
     position: relative;
@@ -9,6 +10,8 @@
     border-radius: 8px;
     text-transform: uppercase;
     overflow: hidden;
+    @include transitions.transition-buttons(0,1);
+
 
     &::before {
         content: "";
@@ -18,19 +21,6 @@
         z-index: 0;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        transition: opacity .3s ease-in;
-    }
-
-    &:hover,
-    &:focus {
-        @media screen and (min-width: $breakpoint-m) {
-            cursor: pointer;
-
-            &::before {
-                opacity: 1;
-            }
-        }
     }
 
     &:focus {
